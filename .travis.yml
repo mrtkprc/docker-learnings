@@ -16,8 +16,15 @@ after_success:
   # Log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --pasword-stdin
   # Take those images and push them into docker hub
+  - docker tag multi-client mrtkprc/multi-client
   - docker push mrtkprc/multi-client
+
+  - docker tag multi-nginx mrtkprc/multi-nginx
   - docker push mrtkprc/multi-nginx
+
+  - docker tag multi-server mrtkprc/multi-server
   - docker push mrtkprc/multi-server
+
+  - docker tag multi-worker mrtkprc/multi-worker
   - docker push mrtkprc/multi-worker
 
