@@ -46,6 +46,7 @@ After this command, ``docker ps -a`` doesn't show removed containers.
 
 ### Inspect container
 ``docker inspect <container_name>``
+``docker inspect <container_name> | grep IPAddress``
 
 ### Container logs
 ``docker logs <container_id>``
@@ -57,4 +58,18 @@ After this command, ``docker ps -a`` doesn't show removed containers.
 ``docker inspect <container_id>``
 
 You can see environment variables under ``ENV`` tag of json output.
+
+### Run Docker without sudo
+
+``sudo usermod -aG docker ${USER}``
+``su - ${USER}``
+
+### Docker easy installation for ubuntu
+
+``wget -qO- https://get.docker.com | sh``
+
+### Docker cp command
+
+``docker inspect redis-konteyner | grep IPAddress``
+
 
