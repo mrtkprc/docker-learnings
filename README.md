@@ -46,6 +46,7 @@ After this command, ``docker ps -a`` doesn't show removed containers.
 
 ### Inspect container
 ``docker inspect <container_name>``
+
 ``docker inspect <container_name> | grep IPAddress``
 
 ### Container logs
