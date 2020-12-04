@@ -30,7 +30,10 @@ After this command, ``docker ps -a`` doesn't show removed containers.
 ``docker pull alpine@sha256:4e01ddea8def856ba9fee17668fa0b2e45a8bc78127b7ab6cf921f6d6fd86ac9``
 
 ### Execute command
-``docker exec <image_name> cat /etc/hosts``
+``docker exec <container_name> cat /etc/hosts``
+
+### Execute interactively
+``docker exec -it <container_id> bash``
 
 ### Detach a container
 ``docker run -d <image_name>``
